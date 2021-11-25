@@ -15,7 +15,6 @@ const InfoPersona = () => {
   const [user, setUser] = useState("");
   const [usuario, setUsuario] = useState("none");
 
-
   const LogOut = () => {
     firebase.auth().signOut();
     setUser("");
@@ -66,7 +65,7 @@ const InfoPersona = () => {
       display: "flex",
       fontWeight: "600",
       fontSize: "14px",
-      cursor: "pointer"
+      cursor: "pointer",
     },
 
     miNombre: {
@@ -100,25 +99,24 @@ const InfoPersona = () => {
     },
 
     sugerencias: {
-      display: "inline-block",
+      display: "flex",
       color: "#8E8E8E",
-      width: "50%",
-      height: "100%",
+      width: "100%",
+      height: "50%",
       paddingTop: "13px",
       fontWeight: "600",
       fontSize: "14px",
+      justifyContent: "space-between",
     },
 
     verTodo: {
-      display: "contents",
-      width: "30%",
-      height: "100%",
-      position: "absolute",
-      paddingTop: "13px",
-      color: "black",
+      display: "flex",
+      width: "35%",
+      height: "78%",
       fontWeight: "600",
       fontSize: "12px",
-      justifyContent: "end",
+      justifyContent: "flex-end",
+      alignItems: "center",
       cursor: "pointer",
     },
 
@@ -150,7 +148,6 @@ const InfoPersona = () => {
       fontSize: "14px",
       textDecoration: `${usuario}`,
       cursor: "pointer",
-
     },
   };
   return (
@@ -169,9 +166,10 @@ const InfoPersona = () => {
           Log Out
         </div>
       </div>
-      <div className="sugerencias" style={_stylesPersona.sugerenciasContainer}>
-        <div style={_stylesPersona.sugerencias}>Sugerencias para ti</div>
-
+      <div style={_stylesPersona.sugerenciasContainer}>
+        <div className="sugerencias" style={_stylesPersona.sugerencias}>
+          Sugerencias para ti
+        </div>
         <div style={_stylesPersona.verTodo}>Ver todo</div>
       </div>
 
@@ -179,12 +177,17 @@ const InfoPersona = () => {
         <div className="perfilSugeridos" style={_stylesPersona.fotoPerfil2}>
           {" "}
         </div>
-        <div style={_stylesPersona.sugUser} onMouseEnter={() => {
-                setUsuario("underline");
-              }}
-              onMouseLeave={() => {
-                setUsuario("none");
-              }}>usuario</div>
+        <div
+          style={_stylesPersona.sugUser}
+          onMouseEnter={() => {
+            setUsuario("underline");
+          }}
+          onMouseLeave={() => {
+            setUsuario("none");
+          }}
+        >
+          usuario
+        </div>
       </div>
     </div>
   );

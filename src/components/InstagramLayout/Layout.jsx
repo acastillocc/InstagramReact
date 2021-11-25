@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "./Header";
-import Stories from "./Stories";
-import Post from "./Post";
-import InfoPersona from "./InfoPersona";
+import Header from "../Header";
+import Stories from "../InstagramStory/Stories";
+import Post from "../Post";
+import InfoPersona from "../InfoPersona";
 
 const Layout = () => {
     return(

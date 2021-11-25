@@ -2,6 +2,7 @@ import React from "react";
 import User from "./User";
 
 const Stories = () => {
+  
   const _stylesStories = {
     container: {
       display: "flex",

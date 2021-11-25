@@ -3,7 +3,6 @@ import user from "../images/user.png";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { IoPaperPlaneOutline, IoChatbubbleOutline } from "react-icons/io5";
 import { VscBookmark, VscSmiley } from "react-icons/vsc";
-
 import { BsThreeDots } from "react-icons/bs";
 
 const Post = (props) => {
@@ -195,6 +194,7 @@ const Post = (props) => {
       fontSize: "14px",
       padding: "4px 0px 0px 0px",
       color: "#8E8E8E",
+      backgroundColor: "white"
     },
 
     postTime: {
@@ -207,7 +207,8 @@ const Post = (props) => {
       color: "#8E8E8E",
       borderLeft: "thin solid #DBDBDB",
       borderRight: "thin solid #DBDBDB",
-      cursor: "pointer"
+      cursor: "pointer",
+      backgroundColor: "white"
     },
 
     footerComment: {
@@ -217,7 +218,7 @@ const Post = (props) => {
         width: "94.9%",
         height: "5%",
         border: "thin solid #DBDBDB",
-
+        backgroundColor: "white",
     },
 
     smile: {
@@ -230,8 +231,8 @@ const Post = (props) => {
         paddingLeft: "15px",
         fontSize: "14px",
         color: "#8E8E8E",
-        cursor: "text"
-
+        cursor: "text",
+        backgroundColor: "white"
     },
 
     publicar: {
@@ -241,6 +242,7 @@ const Post = (props) => {
         cursor: "pointer"
     }
   };
+
   return (
     <div className="contentPost" style={_stylesPost.contentPost}>
       <div
@@ -349,7 +351,7 @@ const Post = (props) => {
             usuario
           </div>
           <div className="descriptionContent">
-            
+
             <div className="description" style={_stylesPost.descripcion}>           
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.             
             </div>

@@ -1,6 +1,5 @@
-import React, {useState} from "react";
+import React from "react";
 import logo from "../images/instagram.png";
-import { firebase } from "./firebase";
 import { MdHomeFilled, MdOutlineExplore } from "react-icons/md";
 import { IoPaperPlaneOutline, IoSearch } from "react-icons/io5";
 import {IoMdHeartEmpty} from "react-icons/io"

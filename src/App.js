@@ -1,9 +1,7 @@
 import "./App.css";
 import React, { useState } from "react";
 import Home from "./components/Home";
-import Layout from "./components/Layout";
-
-
+import Layout from "./components/InstagramLayout/Layout";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { firebase } from "./components/firebase";
 
