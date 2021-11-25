@@ -188,7 +188,6 @@ const Post = (props) => {
       alignItems: "center",
       textOverflow: "ellipsis",
       whiteSpace: "nowrap",
-      overflow: "ellipsis",
     },
 
     texts: {
@@ -208,6 +207,7 @@ const Post = (props) => {
       color: "#8E8E8E",
       borderLeft: "thin solid #DBDBDB",
       borderRight: "thin solid #DBDBDB",
+      cursor: "pointer"
     },
 
     footerComment: {
@@ -349,11 +349,9 @@ const Post = (props) => {
             usuario
           </div>
           <div className="descriptionContent">
-            <div className="description" style={_stylesPost.descripcion}>
-              {" "}
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse commodo. consectetur adipiscing elit. Suspendisse
-              commodo.
+            
+            <div className="description" style={_stylesPost.descripcion}>           
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.             
             </div>
           </div>
         </div>

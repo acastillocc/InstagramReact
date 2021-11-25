@@ -50,9 +50,6 @@ const Stories = () => {
         <User size="one" />
         <User size="two" />
         <User size="three" />
-        <User size="one" />
-        <User size="two" />
-        <User size="three" />
       </div>
     </div>
   );

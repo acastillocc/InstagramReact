@@ -8,13 +8,6 @@ import { BsPlusSquare } from "react-icons/bs";
 import { VscAccount } from "react-icons/vsc";
 
 const Header = () => {
-  const [user, setUser] = useState("empty");
-
-  const LogOut = () => {
-    firebase.auth().signOut();
-    setUser('');
-    console.log({user});
-  }
 
   const _stylesHeader = {
     container: {
@@ -89,6 +82,8 @@ const Header = () => {
       height: "100%",
       cursor: "pointer",
     }
+
+    
     
   };
 
@@ -113,7 +108,6 @@ const Header = () => {
           <VscAccount size={25} />
         </div>
 
-        <button onClick={LogOut}>Cerrar Sesión</button>
       </div>
       </div>
   );
