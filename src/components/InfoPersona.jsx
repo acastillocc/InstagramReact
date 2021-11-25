@@ -13,7 +13,8 @@ const InfoPersona = () => {
     });
   }, []);
   const [user, setUser] = useState("");
-  const [usuario, setUsuario] = useState("none");
+  const [usuario2, setUsuario2] = useState("none");
+  const [usuario1, setUsuario1] = useState("none");
 
   const LogOut = () => {
     firebase.auth().signOut();
@@ -138,6 +139,18 @@ const InfoPersona = () => {
       cursor: "pointer",
     },
 
+    fotoPerfil3: {
+      display: "flex",
+      position: "relative",
+      top: "50px",
+      width: "12%",
+      height: "70%",
+      margin: "5px",
+      borderRadius: "50px",
+      backgroundImage: "url(https://picsum.photos//90/71)",
+      cursor: "pointer",
+    },
+
     sugUser: {
       display: "grid",
       width: "90%",
@@ -146,7 +159,20 @@ const InfoPersona = () => {
       alignContent: "center",
       fontWeight: "600",
       fontSize: "14px",
-      textDecoration: `${usuario}`,
+      textDecoration: `${usuario1}`,
+      cursor: "pointer",
+    },
+    sugUser2: {
+      display: "grid",
+      position: "relative",
+      top: "50px",
+      width: "90%",
+      height: "90%",
+      paddingLeft: "10px",
+      alignContent: "center",
+      fontWeight: "600",
+      fontSize: "14px",
+      textDecoration: `${usuario2}`,
       cursor: "pointer",
     },
   };
@@ -175,20 +201,41 @@ const InfoPersona = () => {
 
       <div className="sugerenciaUsers" style={_stylesPersona.sugUsersContainer}>
         <div className="perfilSugeridos" style={_stylesPersona.fotoPerfil2}>
-          {" "}
+          
         </div>
         <div
           style={_stylesPersona.sugUser}
           onMouseEnter={() => {
-            setUsuario("underline");
+            setUsuario1("underline");
           }}
           onMouseLeave={() => {
-            setUsuario("none");
+            setUsuario1("none");
           }}
         >
           usuario
         </div>
+        
       </div>
+
+      <div className="sugerenciaUsers" style={_stylesPersona.sugUsersContainer}>
+        <div className="perfilSugeridos" style={_stylesPersona.fotoPerfil3}>
+          
+        </div>
+        <div
+          style={_stylesPersona.sugUser2}
+          onMouseEnter={() => {
+            setUsuario2("underline");
+          }}
+          onMouseLeave={() => {
+            setUsuario2("none");
+          }}
+        >
+          usuario
+        </div>
+        
+      </div>
+      
+      
     </div>
   );
 };
